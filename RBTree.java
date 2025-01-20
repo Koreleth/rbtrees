@@ -31,6 +31,7 @@ public class RBTree <T extends Comparable<T>>{
                 node = node.right;
             } else {
                 throw new IllegalArgumentException("BST already contains a node with key " + key);
+                // Kein Abbruch. Einfach Zahl ignorieren
             }
         }
 
