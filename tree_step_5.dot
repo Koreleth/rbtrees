@@ -1,0 +1,14 @@
+digraph RBTree {
+    node [shape=circle];
+    "54" [color=black];
+    "54" -> "7";
+    "7" [color=black];
+    "7" -> "15";
+    "15" [color=red];
+    "54" -> "88";
+    "88" [color=black];
+    "88" -> "75";
+    "75" [color=red];
+    "88" -> "96";
+    "96" [color=red];
+}
