@@ -1,6 +1,5 @@
-public class RBTree {
+public class RBTree <T extends Comparable<T>>{
 
-    public class RedBlackTree<T extends Comparable<T>> {
     private static final boolean RED = true;
     private static final boolean BLACK = false;
 
@@ -15,6 +14,7 @@ public class RBTree {
             this.data = data;
             this.color = RED;
         }
+
     }
 
     public void insert(T key) {
@@ -127,7 +127,7 @@ public class RBTree {
         leftChild.right = node;
         node.parent = leftChild;
     }
-}
+
 
     
 }
