@@ -1,6 +1,0 @@
-digraph RBTree {
-    node [shape=circle];
-    "77" [color=black];
-    "77" -> "49";
-    "49" [color=red];
-}
