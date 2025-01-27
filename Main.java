@@ -7,14 +7,16 @@ public class Main {
         Random random = new Random();
 
         for (int i = 0; i < 15; i++) {
-            int randomValue = random.nextInt(100); // Erzeugen einer zufälligen Zahl zwischen 0 und 99
+            int randomValue = random.nextInt(100); // Zufällige Zahl zwischen 0 und 99
             IntComparable intComparable = new IntComparable(randomValue);
             System.out.println("Inserting: " + intComparable);
             tree.insert(intComparable);
-        }
 
-        // Optional: Implement a method to display the tree structure or its in-order traversal
-        // tree.display(); // Uncomment this line if you have a display method implemented
+            // DOT-Datei nach jedem Schritt speichern
+            String filename = "tree_step_" + i + ".dot";
+            tree.printDOT(filename);
+            System.out.println("DOT file written: " + filename);
+        }
     }
     
     public static class IntComparable implements Comparable<IntComparable> {

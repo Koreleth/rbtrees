@@ -1,4 +1,4 @@
 digraph RBTree {
     node [shape=circle];
-    "75" [color=black];
+    "77" [color=black];
 }

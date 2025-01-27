@@ -1,3 +1,6 @@
+import java.io.FileWriter;
+import java.io.IOException;
+
 public class RBTree <T extends Comparable<T>>{
 
     private static final boolean RED = true;
@@ -128,6 +131,34 @@ public class RBTree <T extends Comparable<T>>{
         leftChild.right = node;
         node.parent = leftChild;
     }
+
+    public void printDOT(String filename) {
+        try (FileWriter writer = new FileWriter(filename)) {
+            writer.write("digraph RBTree {\n");
+            writer.write("    node [shape=circle];\n");
+            if (root != null) {
+                writeDOTNode(writer, root);
+            }
+            writer.write("}\n");
+        } catch (IOException e) {
+            System.err.println("Error writing DOT file: " + e.getMessage());
+        }
+    }
+
+    private void writeDOTNode(FileWriter writer, Node node) throws IOException {
+        if (node != null) {
+            writer.write("    \"" + node.data + "\" [color=" + (node.color == RED ? "red" : "black") + "];\n");
+            if (node.left != null) {
+                writer.write("    \"" + node.data + "\" -> \"" + node.left.data + "\";\n");
+                writeDOTNode(writer, node.left);
+            }
+            if (node.right != null) {
+                writer.write("    \"" + node.data + "\" -> \"" + node.right.data + "\";\n");
+                writeDOTNode(writer, node.right);
+            }
+        }
+    }
+
 
 
     
