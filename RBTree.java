@@ -11,6 +11,11 @@ public class RBTree<T extends Comparable<T>> {
     // Die Wurzel des Baumes.
     private Node root;
 
+    // Konstruktor
+    public RBTree() {
+        root = null;
+    }
+
     // Innere Klasse, die die Struktur eines Knotens im RB-Baum definiert.
     private class Node {
         T data; // Der Wert, den der Knoten speichert.
@@ -20,6 +25,8 @@ public class RBTree<T extends Comparable<T>> {
         // Konstruktor für einen neuen Knoten.
         Node(T data) {
             this.data = data;
+            this.left = null;
+            this.right = null;
             this.color = RED; // Neue Knoten sind standardmäßig rot.
         }
     }
@@ -143,7 +150,7 @@ public class RBTree<T extends Comparable<T>> {
     public void printDOT(String filename) {
         try (FileWriter writer = new FileWriter(filename)) {
             writer.write("digraph RBTree {\n");
-            writer.write("    node [shape=circle];\n");
+            writer.write("    node [shape=circle, fontcolor=white];\n");
             if (root != null) {
                 writeDOTNode(writer, root);
             }
@@ -156,14 +163,20 @@ public class RBTree<T extends Comparable<T>> {
     // Hilfsmethode, um Knoten im DOT-Format zu schreiben.
     private void writeDOTNode(FileWriter writer, Node node) throws IOException {
         if (node != null) {
-            writer.write("    \"" + node.data + "\" [color=" + (node.color == RED ? "red" : "black") + "];\n");
+            writer.write("    \"" + node.data + "\" [color=" + (node.color == RED ? "red" : "black") + ", style=filled];\n");
             if (node.left != null) {
                 writer.write("    \"" + node.data + "\" -> \"" + node.left.data + "\";\n");
                 writeDOTNode(writer, node.left);
+            } else {
+                writer.write("    \"" + node.data + "\" -> \"" + node.data + "_left_nil\" [color=black, style=filled, fontcolor=white];\n");
+                writer.write("    \"" + node.data + "_left_nil\" [label=\"NIL\", shape=record, color=black, style=filled, fontcolor=white];\n");
             }
             if (node.right != null) {
                 writer.write("    \"" + node.data + "\" -> \"" + node.right.data + "\";\n");
                 writeDOTNode(writer, node.right);
+            } else {
+                writer.write("    \"" + node.data + "\" -> \"" + node.data + "_right_nil\" [color=black, style=filled, fontcolor=white];\n");
+                writer.write("    \"" + node.data + "_right_nil\" [label=\"NIL\", shape=record, color=black, style=filled, fontcolor=white];\n");
             }
         }
     }
