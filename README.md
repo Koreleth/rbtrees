@@ -20,14 +20,14 @@ Beispiele für Einsatzbereiche:
 
 ## 🏗️ Projektstruktur
 
-``
+```text
 .
 ├── src/ # Quellcode der Baumklassen und Algorithmen
 ├── tests/ # Unit-Tests für Baumoperationen
 ├── examples/ # Beispielprogramme zur Demonstration
 ├── docs/ # Dokumentation (falls vorhanden)
 └── README.md
-`` 
+```
 
 ---
 
@@ -55,7 +55,7 @@ So kannst du *brtrees* in deinem Projekt verwenden:
    ```bash
    git clone https://github.com/Koreleth/brtrees.git
    cd brtrees
-  ```
+  ``
 
 (Optional) Baue das Projekt, falls ein Build-Prozess vorhanden ist (z. B. mit Maven / Gradle / Make / Setup-Skript)
 
