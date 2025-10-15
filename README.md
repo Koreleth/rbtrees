@@ -1,4 +1,4 @@
-# rbtrees
+# 🎄rbtrees
 
 Repository für *brtrees* – eine Bibliothek / ein Modul zur Arbeit mit Bäumen (z. B. Binärbäume, Suchbäume, Balancierte Bäume) in Java.
 
@@ -42,10 +42,8 @@ Beispiele für Einsatzbereiche:
 
 ```text
 .
-├── src/ # Quellcode der Baumklassen und Algorithmen
-├── tests/ # Unit-Tests für Baumoperationen
-├── examples/ # Beispielprogramme zur Demonstration
-├── docs/ # Dokumentation (falls vorhanden)
+├── RBTree.java  # Funktion
+├── main.java  # Unit-Tests für Baumoperationen
 └── README.md
 ```
 
