@@ -1,12 +1,32 @@
-# brtrees
+# rbtrees
 
-Repository für *brtrees* – eine Bibliothek / ein Modul zur Arbeit mit Bäumen (z. B. Binärbäume, Suchbäume, Balancierte Bäume) in [Programmiersprache einsetzen, z. B. Java / C++ / Python].
+Repository für *brtrees* – eine Bibliothek / ein Modul zur Arbeit mit Bäumen (z. B. Binärbäume, Suchbäume, Balancierte Bäume) in Java.
+
+---
+
+## Rot-Schwarz-Baum
+
+Ein Rot-Schwarz-Baum (Red-Black Tree) ist eine selbstbalancierende binäre Suchbaumstruktur.
+Damit der Baum ausgeglichen bleibt, muss er bestimmte Regeln (Eigenschaften) einhalten.
+
+*🔴⚫ Regeln eines Red-Black-Trees*
+
+1. Jeder Knoten ist entweder rot oder schwarz.
+2. Die Wurzel ist immer schwarz.
+3. Jedes Blatt (NIL-Knoten bzw. NULL-Zeiger) ist schwarz.
+→ Diese „NIL“-Knoten sind die unsichtbaren Blätter, die keine echten Werte enthalten.
+4. Wenn ein Knoten rot ist, dann sind beide seiner Kinder schwarz.
+→ Es dürfen keine zwei roten Knoten direkt aufeinander folgen („keine roten Eltern-Kind-Paare“).
+
+Für jeden Knoten gilt:
+Alle Pfade von diesem Knoten zu seinen Blättern (NIL-Knoten) enthalten die gleiche Anzahl schwarzer Knoten.
+→ Diese Anzahl nennt man „Black-Height“.
 
 ---
 
 ## 📖 Überblick
 
-*brtrees* stellt Datenstrukturen und Algorithmen bereit, mit denen man Bäume effizient verwalten, durchsuchen und manipulieren kann.  
+*rbtrees* stellt Datenstrukturen und Algorithmen bereit, mit denen man Bäume effizient verwalten, durchsuchen und manipulieren kann.  
 Das Ziel ist es, robuste und wiederverwendbare Baum-Funktionen für (z. B.) Sortierbäume, Suchbäume und Balancierungsverfahren zu bieten.
 
 Beispiele für Einsatzbereiche:
@@ -33,7 +53,7 @@ Beispiele für Einsatzbereiche:
 
 ## ✨ Funktionen & Features
 
-Hier einige der typischen Funktionen, die *brtrees* bereitstellt oder bereitstellen könnte (bitte anpassen):
+Hier einige der typischen Funktionen, die *rbtrees* bereitstellt oder bereitstellen könnte (bitte anpassen):
 
 - Baum-Erzeugung (leerer Baum, aus Liste / Array)  
 - Einfügen eines Schlüssels / Werts  
