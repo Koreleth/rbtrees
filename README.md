@@ -9,7 +9,7 @@ Repository für *brtrees* – eine Bibliothek / ein Modul zur Arbeit mit Bäumen
 Ein Rot-Schwarz-Baum (Red-Black Tree) ist eine selbstbalancierende binäre Suchbaumstruktur.
 Damit der Baum ausgeglichen bleibt, muss er bestimmte Regeln (Eigenschaften) einhalten.
 
-*🔴⚫ Regeln eines Red-Black-Trees*
+🔴⚫ Regeln eines Red-Black-Trees:
 
 1. Jeder Knoten ist entweder rot oder schwarz.
 2. Die Wurzel ist immer schwarz.
