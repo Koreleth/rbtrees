@@ -75,7 +75,7 @@ So kannst du *rbtrees* in deinem Projekt verwenden:
    ```bash
    git clone https://github.com/Koreleth/brtrees.git
    cd brtrees
-  ``
+   ```
 
 (Optional) Baue das Projekt, falls ein Build-Prozess vorhanden ist (z. B. mit Maven / Gradle / Make / Setup-Skript)
 
