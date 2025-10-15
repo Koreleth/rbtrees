@@ -69,7 +69,7 @@ Hier einige der typischen Funktionen, die *rbtrees* bereitstellt oder bereitstel
 
 ## 🛠️ Installation & Nutzung
 
-So kannst du *brtrees* in deinem Projekt verwenden:
+So kannst du *rbtrees* in deinem Projekt verwenden:
 
 1. Klone das Repository:
    ```bash
